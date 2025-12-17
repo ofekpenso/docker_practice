@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ברוכים הבאים ל-Docker</title>
+    <style>
+        /* איפוס בסיסי ופונטים */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0db7ed 0%, #384d54 100%);
+            height: 100vh;
+            display: flex;
+            justify_content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        /* הכרטיס המרכזי */
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        /* האייקון של הלוויתן */
+        .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        h1 {
+            color: #2496ed;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* סטטוס חי */
+        .status-box {
+            margin-top: 30px;
+            background-color: #f0f9ff;
+            border: 1px solid #bde4ff;
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .status-indicator {
+            height: 12px;
+            width: 12px;
+            background-color: #4caf50;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 8px;
+            box-shadow: 0 0 0 0 rgba(76, 175, 80, 1);
+            animation: pulse 2s infinite;
+        }
+
+        /* אנימציות */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon">🐳</div>
+        <h1>ברוך הבא ל-Docker!</h1>
+        <p>
+            כל הכבוד! הצלחת להרים קונטיינר בשרת Linux.
+            <br>
+            האתר הזה נבנה ב-HTML/CSS ומורץ על גבי Nginx בתוך סביבה מבודדת.
+        </p>
+        
+        <div class="status-box">
+            <span class="status-indicator"></span>
+            <strong>סטטוס מערכת:</strong> פעיל ותקין
+        </div>
+    </div>
+
+</body>
+</html>
